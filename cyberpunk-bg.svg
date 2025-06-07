@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cyberpunkGrid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0033" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="neonLines" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9900ff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00ccff" stop-opacity="0.6" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Fond cyberpunk -->
+  <rect width="100%" height="100%" fill="url(#cyberpunkGrid)" />
+  
+  <!-- Grille cyberpunk -->
+  <g stroke="url(#neonLines)" stroke-width="0.5" opacity="0.3">
+    <!-- Lignes horizontales -->
+    <line x1="0" y1="100" x2="1920" y2="100" />
+    <line x1="0" y1="200" x2="1920" y2="200" />
+    <line x1="0" y1="300" x2="1920" y2="300" />
+    <line x1="0" y1="400" x2="1920" y2="400" />
+    <line x1="0" y1="500" x2="1920" y2="500" />
+    <line x1="0" y1="600" x2="1920" y2="600" />
+    <line x1="0" y1="700" x2="1920" y2="700" />
+    <line x1="0" y1="800" x2="1920" y2="800" />
+    <line x1="0" y1="900" x2="1920" y2="900" />
+    <line x1="0" y1="1000" x2="1920" y2="1000" />
+    
+    <!-- Lignes verticales -->
+    <line x1="100" y1="0" x2="100" y2="1080" />
+    <line x1="300" y1="0" x2="300" y2="1080" />
+    <line x1="500" y1="0" x2="500" y2="1080" />
+    <line x1="700" y1="0" x2="700" y2="1080" />
+    <line x1="900" y1="0" x2="900" y2="1080" />
+    <line x1="1100" y1="0" x2="1100" y2="1080" />
+    <line x1="1300" y1="0" x2="1300" y2="1080" />
+    <line x1="1500" y1="0" x2="1500" y2="1080" />
+    <line x1="1700" y1="0" x2="1700" y2="1080" />
+    <line x1="1900" y1="0" x2="1900" y2="1080" />
+  </g>
+  
+  <!-- Éléments décoratifs lumineux -->
+  <circle cx="960" cy="540" r="400" fill="url(#neonLines)" opacity="0.1" />
+  <circle cx="960" cy="540" r="300" fill="none" stroke="#8a2be2" stroke-width="2" opacity="0.2" />
+  <circle cx="960" cy="540" r="200" fill="none" stroke="#9900ff" stroke-width="3" opacity="0.3" />
+  
+  <!-- Hexagones lumineux en arrière-plan -->
+  <g fill="#9900ff" opacity="0.15" filter="url(#glow)">
+    <polygon points="200,300 250,225 350,225 400,300 350,375 250,375" />
+    <polygon points="1600,800 1650,725 1750,725 1800,800 1750,875 1650,875" />
+    <polygon points="1200,200 1250,125 1350,125 1400,200 1350,275 1250,275" />
+    <polygon points="600,900 650,825 750,825 800,900 750,975 650,975" />
+  </g>
+</svg>
