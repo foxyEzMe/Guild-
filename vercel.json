@@ -37,12 +37,6 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "functions": {
-    "server/index.ts": {
-      "maxDuration": 30,
-      "memory": 1024
-    }
-  },
   "regions": ["fra1"],
   "headers": [
     {
