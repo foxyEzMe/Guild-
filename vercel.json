@@ -16,28 +16,24 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/server/index.ts"
+      "source": "/api/(.*)",
+      "destination": "/server/index.ts"
     },
     {
-      "src": "/assets/(.*)",
-      "dest": "/dist/client/assets/$1"
+      "source": "/assets/(.*)",
+      "destination": "/dist/client/assets/$1"
     },
     {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
-      "dest": "/dist/client/$1"
+      "source": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
+      "destination": "/dist/client/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/dist/client/index.html"
+      "source": "/(.*)",
+      "destination": "/dist/client/index.html"
     }
   ],
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "regions": ["fra1"],
   "headers": [
     {
       "source": "/api/(.*)",
@@ -65,5 +61,9 @@
         }
       ]
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "regions": ["fra1"]
 }
